@@ -25,6 +25,7 @@ Partial Class CatShowMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.addEvent_Button = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.viewEvents_Button = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,11 +58,21 @@ Partial Class CatShowMain
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'viewEvents_Button
+        '
+        Me.viewEvents_Button.Location = New System.Drawing.Point(21, 298)
+        Me.viewEvents_Button.Name = "viewEvents_Button"
+        Me.viewEvents_Button.Size = New System.Drawing.Size(110, 37)
+        Me.viewEvents_Button.TabIndex = 3
+        Me.viewEvents_Button.Text = "View Events"
+        Me.viewEvents_Button.UseVisualStyleBackColor = True
+        '
         'CatShowMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(670, 469)
+        Me.Controls.Add(Me.viewEvents_Button)
         Me.Controls.Add(Me.addEvent_Button)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -76,4 +87,5 @@ Partial Class CatShowMain
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents addEvent_Button As Button
+    Friend WithEvents viewEvents_Button As Button
 End Class

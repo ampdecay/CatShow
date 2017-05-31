@@ -99,10 +99,12 @@ Partial Class AddEventForm
         '
         'date_selector
         '
+        Me.date_selector.CustomFormat = ""
         Me.date_selector.Location = New System.Drawing.Point(12, 241)
         Me.date_selector.Name = "date_selector"
         Me.date_selector.Size = New System.Drawing.Size(200, 20)
         Me.date_selector.TabIndex = 7
+        Me.date_selector.Value = New Date(2017, 5, 31, 0, 0, 0, 0)
         '
         'Label1
         '

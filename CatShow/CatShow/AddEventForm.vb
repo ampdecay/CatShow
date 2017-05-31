@@ -11,7 +11,7 @@ Public Class AddEventForm
 
         connection.ConnectionString = CatShow.Utility.GetConnectionString()
         Dim rng = New Random()
-        eventID = rng.Next(100000, 200000)
+        eventID = rng.Next(1000, 10000)
         Dim query As String = String.Empty
         query &= "Select event_id from Events where event_id = @id"
         Dim idCMD As New SqlCommand
@@ -39,7 +39,7 @@ Public Class AddEventForm
         Else
             'insert event into database
             Dim location As String = location_box.Text
-            Dim eventDate As Date = date_selector.Value
+            Dim eventDate = date_selector.Value.Date.ToShortDateString()
             Dim query As String = String.Empty
             query &= "INSERT INTO Events VALUES (@eventID, @location, @date)"
             Using comm As New SqlCommand()
@@ -54,22 +54,12 @@ Public Class AddEventForm
                 Try
                     connection.Open()
                     Dim result As Int16 = comm.ExecuteNonQuery()
-                    MessageBox.Show(result.ToString)
+                    MessageBox.Show("Event Added Successfully!")
                 Catch ex As SqlException
                     MessageBox.Show(ex.Message.ToString, "Error Message")
                 End Try
             End Using
-
             connection.Close()
-
-
-
         End If
-
-
     End Sub
-
-
-
-
 End Class
