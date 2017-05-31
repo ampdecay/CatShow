@@ -88,6 +88,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEventForm.Designer.vb">
+      <DependentUpon>AddEventForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddEventForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CatShowDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,8 +121,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utility.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddEventForm.resx">
+      <DependentUpon>AddEventForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatShowMain.resx">
       <DependentUpon>CatShowMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -151,9 +161,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CatShow.mdf" />
+    <Content Include="CatShow.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="CatShow_log.ldf">
       <DependentUpon>CatShow.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="readme.txt" />
     <Content Include="yuffie.png" />

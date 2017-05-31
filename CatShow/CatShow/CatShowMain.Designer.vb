@@ -22,20 +22,11 @@ Partial Class CatShowMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.addEvent_Button = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.CatShow.My.Resources.Resources.yuffie
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -47,11 +38,31 @@ Partial Class CatShowMain
         Me.Label1.Text = "Welcome To The DaigleSoft Cat Show Management System. Please Select from the opti" &
     "ons below."
         '
+        'addEvent_Button
+        '
+        Me.addEvent_Button.Location = New System.Drawing.Point(21, 242)
+        Me.addEvent_Button.Name = "addEvent_Button"
+        Me.addEvent_Button.Size = New System.Drawing.Size(110, 37)
+        Me.addEvent_Button.TabIndex = 2
+        Me.addEvent_Button.Text = "Add Event"
+        Me.addEvent_Button.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.CatShow.My.Resources.Resources.yuffie
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'CatShowMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(670, 469)
+        Me.Controls.Add(Me.addEvent_Button)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "CatShowMain"
@@ -64,4 +75,5 @@ Partial Class CatShowMain
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents addEvent_Button As Button
 End Class
