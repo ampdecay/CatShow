@@ -161,12 +161,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CatShow.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="CatShow.mdf" />
     <Content Include="CatShow_log.ldf">
       <DependentUpon>CatShow.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="readme.txt" />
     <Content Include="yuffie.png" />

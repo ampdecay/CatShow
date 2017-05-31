@@ -60,8 +60,8 @@ Partial Public Class CatShowDataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("Cats")) Is Nothing) Then
-                MyBase.Tables.Add(New catsDataTable(ds.Tables("Cats")))
+            If (Not (ds.Tables("cats")) Is Nothing) Then
+                MyBase.Tables.Add(New catsDataTable(ds.Tables("cats")))
             End If
             If (Not (ds.Tables("Events")) Is Nothing) Then
                 MyBase.Tables.Add(New EventsDataTable(ds.Tables("Events")))
@@ -183,8 +183,8 @@ Partial Public Class CatShowDataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("Cats")) Is Nothing) Then
-                MyBase.Tables.Add(New catsDataTable(ds.Tables("Cats")))
+            If (Not (ds.Tables("cats")) Is Nothing) Then
+                MyBase.Tables.Add(New catsDataTable(ds.Tables("cats")))
             End If
             If (Not (ds.Tables("Events")) Is Nothing) Then
                 MyBase.Tables.Add(New EventsDataTable(ds.Tables("Events")))
@@ -224,7 +224,7 @@ Partial Public Class CatShowDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tablecats = CType(MyBase.Tables("Cats"),catsDataTable)
+        Me.tablecats = CType(MyBase.Tables("cats"),catsDataTable)
         If (initTable = true) Then
             If (Not (Me.tablecats) Is Nothing) Then
                 Me.tablecats.InitVars
@@ -367,7 +367,7 @@ Partial Public Class CatShowDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Cats"
+            Me.TableName = "cats"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -532,13 +532,6 @@ Partial Public Class CatShowDataSet
             Me.columnname.MaxLength = 50
             Me.columnbreed.MaxLength = 50
             Me.columnowner.MaxLength = 10
-            Me.ExtendedProperties.Add("Generator_RowClassName", "catsRow")
-            Me.ExtendedProperties.Add("Generator_RowEvArgName", "catsRowChangeEvent")
-            Me.ExtendedProperties.Add("Generator_RowEvHandlerName", "catsRowChangeEventHandler")
-            Me.ExtendedProperties.Add("Generator_TableClassName", "catsDataTable")
-            Me.ExtendedProperties.Add("Generator_TablePropName", "cats")
-            Me.ExtendedProperties.Add("Generator_TableVarName", "tablecats")
-            Me.ExtendedProperties.Add("Generator_UserTableName", "Cats")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1318,7 +1311,7 @@ Partial Public Class CatShowDataSet
                 Try 
                     Return CType(Me(Me.tablecats.nameColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'name' in table 'Cats' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'name' in table 'cats' is DBNull.", e)
                 End Try
             End Get
             Set
@@ -1333,7 +1326,7 @@ Partial Public Class CatShowDataSet
                 Try 
                     Return CType(Me(Me.tablecats.breedColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'breed' in table 'Cats' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'breed' in table 'cats' is DBNull.", e)
                 End Try
             End Get
             Set
@@ -1348,7 +1341,7 @@ Partial Public Class CatShowDataSet
                 Try 
                     Return CType(Me(Me.tablecats.ownerColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'owner' in table 'Cats' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'owner' in table 'cats' is DBNull.", e)
                 End Try
             End Get
             Set
@@ -1363,7 +1356,7 @@ Partial Public Class CatShowDataSet
                 Try 
                     Return CType(Me(Me.tablecats.event_idColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'event_id' in table 'Cats' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'event_id' in table 'cats' is DBNull.", e)
                 End Try
             End Get
             Set
@@ -1884,7 +1877,7 @@ Namespace CatShowDataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Cats"
+            tableMapping.DataSetTable = "cats"
             tableMapping.ColumnMappings.Add("cat_id", "cat_id")
             tableMapping.ColumnMappings.Add("name", "name")
             tableMapping.ColumnMappings.Add("breed", "breed")
@@ -1997,7 +1990,7 @@ Namespace CatShowDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As CatShowDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "Cats")
+            Return Me.Adapter.Update(dataSet, "cats")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

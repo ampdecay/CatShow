@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CatShowConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CatShowConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CatShow.My.MySettings.GlobalReference.Default.CatShowConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CatsTableAdapter" GeneratorDataComponentClassName="catsTableAdapter" Name="Cats" UserDataComponentName="CatsTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="catsTableAdapter" GeneratorDataComponentClassName="catsTableAdapter" Name="cats" UserDataComponentName="catsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="CatShowConnectionString (MySettings)" DbObjectName="dbo.cats" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -219,7 +219,7 @@ SELECT event_id, cat_id, coat, behavior, gait, overall FROM Scores WHERE (cat_id
   <xs:element name="CatShowDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CatShowDataSet" msprop:Generator_UserDSName="CatShowDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Cats" msprop:Generator_TableClassName="catsDataTable" msprop:Generator_TableVarName="tablecats" msprop:Generator_TablePropName="cats" msprop:Generator_RowDeletingName="catsRowDeleting" msprop:Generator_RowChangingName="catsRowChanging" msprop:Generator_RowEvHandlerName="catsRowChangeEventHandler" msprop:Generator_RowDeletedName="catsRowDeleted" msprop:Generator_UserTableName="Cats" msprop:Generator_RowChangedName="catsRowChanged" msprop:Generator_RowEvArgName="catsRowChangeEvent" msprop:Generator_RowClassName="catsRow">
+        <xs:element name="cats" msprop:Generator_TableClassName="catsDataTable" msprop:Generator_TableVarName="tablecats" msprop:Generator_TablePropName="cats" msprop:Generator_RowDeletingName="catsRowDeleting" msprop:Generator_RowChangingName="catsRowChanging" msprop:Generator_RowEvHandlerName="catsRowChangeEventHandler" msprop:Generator_RowDeletedName="catsRowDeleted" msprop:Generator_UserTableName="cats" msprop:Generator_RowChangedName="catsRowChanged" msprop:Generator_RowEvArgName="catsRowChangeEvent" msprop:Generator_RowClassName="catsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cat_id" msprop:Generator_ColumnVarNameInTable="columncat_id" msprop:Generator_ColumnPropNameInRow="cat_id" msprop:Generator_ColumnPropNameInTable="cat_idColumn" msprop:Generator_UserColumnName="cat_id" type="xs:int" />
@@ -278,7 +278,7 @@ SELECT event_id, cat_id, coat, behavior, gait, overall FROM Scores WHERE (cat_id
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Cats" />
+      <xs:selector xpath=".//mstns:cats" />
       <xs:field xpath="mstns:cat_id" />
     </xs:unique>
     <xs:unique name="Events_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">

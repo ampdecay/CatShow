@@ -23,8 +23,6 @@ Partial Class AddEventForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.EventsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EventidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LocationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,12 +32,9 @@ Partial Class AddEventForm
         Me.location_box = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.date_selector = New System.Windows.Forms.DateTimePicker()
-        CType(Me.EventsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.addEvent_button = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'EventsBindingSource
-        '
-        Me.EventsBindingSource.DataMember = "Events"
         '
         'EventidDataGridViewTextBoxColumn
         '
@@ -104,30 +99,49 @@ Partial Class AddEventForm
         '
         'date_selector
         '
-        Me.date_selector.Location = New System.Drawing.Point(232, 103)
+        Me.date_selector.Location = New System.Drawing.Point(12, 241)
         Me.date_selector.Name = "date_selector"
         Me.date_selector.Size = New System.Drawing.Size(200, 20)
         Me.date_selector.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 225)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Event Date"
+        '
+        'addEvent_button
+        '
+        Me.addEvent_button.Location = New System.Drawing.Point(12, 297)
+        Me.addEvent_button.Name = "addEvent_button"
+        Me.addEvent_button.Size = New System.Drawing.Size(75, 23)
+        Me.addEvent_button.TabIndex = 9
+        Me.addEvent_button.Text = "Add Event"
+        Me.addEvent_button.UseVisualStyleBackColor = True
         '
         'AddEventForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(502, 408)
+        Me.ClientSize = New System.Drawing.Size(254, 359)
+        Me.Controls.Add(Me.addEvent_button)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.date_selector)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.location_box)
         Me.Controls.Add(Me.genID_Button)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.eventID_Box)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "AddEventForm"
         Me.Text = "Add Event"
-        CType(Me.EventsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents EventsBindingSource As BindingSource
     Friend WithEvents EventidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LocationDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -137,4 +151,6 @@ Partial Class AddEventForm
     Friend WithEvents location_box As RichTextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents date_selector As DateTimePicker
+    Friend WithEvents Label1 As Label
+    Friend WithEvents addEvent_button As Button
 End Class
