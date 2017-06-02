@@ -104,7 +104,7 @@ Partial Class AddEventForm
         Me.date_selector.Name = "date_selector"
         Me.date_selector.Size = New System.Drawing.Size(200, 20)
         Me.date_selector.TabIndex = 7
-        Me.date_selector.Value = New Date(2017, 5, 31, 0, 0, 0, 0)
+        Me.date_selector.Value = New Date(2017, 4, 17, 0, 0, 0, 0)
         '
         'Label1
         '

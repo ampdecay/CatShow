@@ -1,7 +1,4 @@
 ﻿Imports System.Data.SqlClient
-
-
-
 Public Class AddEventForm
 
     Dim connection As SqlConnection = New SqlConnection()
@@ -11,6 +8,7 @@ Public Class AddEventForm
 
         connection.ConnectionString = CatShow.Utility.GetConnectionString()
         Dim rng = New Random()
+        'generate random number between 1000 and 9999 to use as event ID
         eventID = rng.Next(1000, 10000)
         Dim query As String = String.Empty
         query &= "Select event_id from Events where event_id = @id"
@@ -25,7 +23,7 @@ Public Class AddEventForm
         Dim results As Int32 = CInt(idCMD.ExecuteScalar())
 
         While results = eventID
-            'generate random number between 1000 and 9999 to use as event ID
+            'keep generating new ID's until an unused one is found
             eventID = rng.Next(1000, 10000)
         End While
         connection.Close()
@@ -36,6 +34,9 @@ Public Class AddEventForm
         Dim eventID = eventID_Box.Text
         If eventID = "" Then
             MessageBox.Show("Please generate an event ID first before creating an Event!!!")
+
+        ElseIf date_selector.Value <= Date.Today Then
+            MessageBox.Show("Please enter a date later than todays date!!!")
         Else
             'insert event into database
             Dim location As String = location_box.Text
@@ -61,5 +62,10 @@ Public Class AddEventForm
             End Using
             connection.Close()
         End If
+    End Sub
+
+    Private Sub AddEventForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'sets dateselector to current day
+        date_selector.Value = Date.Today
     End Sub
 End Class
